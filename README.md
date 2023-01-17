@@ -1,7 +1,7 @@
 # de_zoomcamp_2023
 Notes and homework from [de_zoomcamp course](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
-Student: Roman Zabolotin (rzabolotin@gmail.com)
-Kohort: 2023
-Hash:
-Leaderboard:
+Student: Roman Zabolotin (rzabolotin@gmail.com)  
+Kohort: 2023  
+Hash:  
+Leaderboard:  
