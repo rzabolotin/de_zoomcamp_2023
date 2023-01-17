@@ -19,8 +19,8 @@ Which tag has the following text? - *Write the image ID to the file*
 - `--idimage string`
 - `--idfile string`
 
-> `docker build --help | grep Write`
-> --iidfile string          Write the image ID to the file
+> `docker build --help | grep Write`  
+> `--iidfile string          Write the image ID to the file`
 
 
 ## Question 2. Understanding docker first run 
@@ -31,8 +31,17 @@ How many python packages/modules are installed?
 
 - 1
 - 6
-- 3
+- [x] 3
 - 7
+
+> `pip list`
+> ```
+> Package    Version
+> ---------- -------
+> pip        22.0.4
+> setuptools 58.1.0
+> wheel      0.38.4
+> ```
 
 # Prepare Postgres
 
