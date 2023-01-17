@@ -15,9 +15,12 @@ Now run the command to get help on the "docker build" command
 Which tag has the following text? - *Write the image ID to the file* 
 
 - `--imageid string`
-- `--iidfile string`
+- [x] `--iidfile string`
 - `--idimage string`
 - `--idfile string`
+
+> `docker build --help | grep Write`
+> --iidfile string          Write the image ID to the file
 
 
 ## Question 2. Understanding docker first run 
