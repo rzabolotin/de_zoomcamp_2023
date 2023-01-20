@@ -56,6 +56,35 @@ You will also need the dataset with zones:
 
 Download this data and put it into Postgres (with jupyter notebooks or with a pipeline)
 
+## My decision
+1. Use `docker-compose.yaml` from course to run pgdatabase & pgadmin
+2. Put some code to `ingest_data.py` to be able to load both files with it
+3. Build docker image with 'Dockerfile', call image data_ingestion
+4. Run `docker-compose up -d`
+5. Run commands to ingest data
+```
+docker run --rm --network week1dataingestion_default data_ingestion \
+ --user root \
+ --password root \
+ --host pgdatabase \
+ --port 5432 \
+ --db ny_taxi \
+ --table_name taxi_data \
+ --convert_dates\
+ --url https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-01.csv.gz
+ 
+docker run --rm --network week1dataingestion_default data_ingestion \
+ --user root \
+ --password root \
+ --host pgdatabase \
+ --port 5432 \
+ --db ny_taxi \
+ --table_name taxi_zones \
+ --url https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv
+```
+
+Connect to the pgadmin server using 8080 port
+
 
 ## Question 3. Count records 
 
