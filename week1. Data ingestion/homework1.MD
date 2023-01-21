@@ -95,9 +95,19 @@ Tip: started and finished on 2019-01-15.
 Remember that `lpep_pickup_datetime` and `lpep_dropoff_datetime` columns are in the format timestamp (date and hour+min+sec) and not in date.
 
 - 20689
-- 20530
+-[x] 20530
 - 17630
 - 21090
+
+```postgresql
+SELECT
+    COUNT(*)
+FROM
+    ny_taxi.public.taxi_data AS t
+WHERE
+  t.lpep_pickup_datetime > '2019-01-15'
+  AND t.lpep_dropoff_datetime < '2019-01-16'
+```
 
 ## Question 4. Largest trip for each day
 
@@ -106,8 +116,18 @@ Use the pick up time for your calculations.
 
 - 2019-01-18
 - 2019-01-28
-- 2019-01-15
+- [x] 2019-01-15
 - 2019-01-10
+
+```postgresql
+SELECT
+    t.lpep_pickup_datetime as day,
+    t.trip_distance
+FROM
+    ny_taxi.public.taxi_data as t
+ORDER BY
+    trip_distance DESC
+LIMIT 5;```
 
 ## Question 5. The number of passengers
 
@@ -115,9 +135,21 @@ In 2019-01-01 how many trips had 2 and 3 passengers?
  
 - 2: 1282 ; 3: 266
 - 2: 1532 ; 3: 126
-- 2: 1282 ; 3: 254
+- [x] 2: 1282 ; 3: 254
 - 2: 1282 ; 3: 274
 
+```postgresql
+SELECT
+    t.passenger_count,
+    COUNT(*)
+FROM
+    ny_taxi.public.taxi_data AS t
+WHERE
+  t.lpep_pickup_datetime >= '2019-01-01'
+  AND t.lpep_pickup_datetime < '2019-01-02'
+GROUP BY
+    t.passenger_count;
+```
 
 ## Question 6. Largest tip
 
@@ -129,8 +161,24 @@ Note: it's not a typo, it's `tip` , not `trip`
 - Central Park
 - Jamaica
 - South Ozone Park
-- Long Island City/Queens Plaza
+- [x] Long Island City/Queens Plaza
 
+
+```postgresql
+SELECT
+    t.tip_amount,
+    pu_zone."Zone" as pu_zone,
+    do_zone."Zone" as do_zone
+FROM
+    ny_taxi.public.taxi_data t
+LEFT JOIN taxi_zones pu_zone on t."PULocationID" = pu_zone."LocationID"
+LEFT JOIN taxi_zones do_zone on t."DOLocationID" = do_zone."LocationID"
+
+WHERE pu_zone."Zone" = 'Astoria'
+ORDER BY
+    t.tip_amount DESC
+LIMIT 5;
+```
 
 ## Submitting the solutions
 
