@@ -95,7 +95,7 @@ Tip: started and finished on 2019-01-15.
 Remember that `lpep_pickup_datetime` and `lpep_dropoff_datetime` columns are in the format timestamp (date and hour+min+sec) and not in date.
 
 - 20689
--[x] 20530
+- [x] 20530
 - 17630
 - 21090
 
@@ -127,7 +127,8 @@ FROM
     ny_taxi.public.taxi_data as t
 ORDER BY
     trip_distance DESC
-LIMIT 5;```
+LIMIT 5;
+```
 
 ## Question 5. The number of passengers
 
