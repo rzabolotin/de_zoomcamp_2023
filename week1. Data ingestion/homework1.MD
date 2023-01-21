@@ -180,10 +180,3 @@ ORDER BY
     t.tip_amount DESC
 LIMIT 5;
 ```
-
-## Submitting the solutions
-
-* Form for submitting: TBA
-* You can submit your homework multiple times. In this case, only the last submission will be used. 
-
-Deadline: 26 January (Thursday), 22:00 CET
