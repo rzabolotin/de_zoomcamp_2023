@@ -3,8 +3,6 @@
 
 import os
 import argparse
-from itertools import count
-
 from time import time
 
 import pandas as pd
