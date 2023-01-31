@@ -9,6 +9,9 @@ pandas = "*"
 sqlalchemy = "*"
 psycopg2-binary = "*"
 prefect-sqlalchemy = "*"
+prefect-gcp = {version = "==0.2.4", extras = ["cloud_storage"]}
+pyarrow = "*"
+pandas-gbq = "*"
 
 [dev-packages]
 
