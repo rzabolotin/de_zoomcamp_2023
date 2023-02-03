@@ -1,0 +1,61 @@
+###
+### A complete description of a Prefect Deployment for flow 'GCP flow'
+###
+name: homework2-2
+description: null
+version: 5635f37198337c8ef7226c57bff53617
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters:
+  color: green
+  year: 2020
+  month: 1
+schedule:
+  cron: 0 5 1 * *
+  timezone: null
+  day_or: true
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: GCP flow
+manifest_path: null
+storage: null
+path: /home/roman/de_zoomcamp_2023/week2_prefect
+entrypoint: gcp_flow_hw1.py:gcp_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      position: 0
+      type: string
+    year:
+      title: year
+      position: 1
+      type: integer
+    month:
+      title: month
+      position: 2
+      type: integer
+  required:
+  - color
+  - year
+  - month
+  definitions: null
+timestamp: '2023-02-03T00:31:42.755816+00:00'
