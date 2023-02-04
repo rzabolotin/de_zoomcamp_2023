@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from prefect import flow, task
 from prefect.tasks import task_input_hash
@@ -28,6 +29,7 @@ def clean_it(df: pd.DataFrame) -> pd.DataFrame:
 @task
 def save_data_local(df: pd.DataFrame, path: Path) -> str:
     """ Save the file locally"""
+    os.makedirs(path, exist_ok=True)
     local_file = f"{path}.parquet"
     df.to_parquet(local_file, compression="gzip")
     return local_file
