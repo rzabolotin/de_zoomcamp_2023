@@ -75,9 +75,8 @@ Make sure you have the parquet data files for Yellow taxi data for Feb. 2019 and
 - 11,338,483
 
 
-[flow](bcg_to_bq_flow_hw3.py)
-[deployment](make_deployment_hw3.py)
-
+[flow](bcg_to_bq_flow_hw3.py)  
+[deployment](make_deployment_hw3.py)  
 
 
 ## Question 4. Github Storage Block
@@ -95,6 +94,8 @@ How many rows were processed by the script?
 - [x] 88,605
 - 190,225
 
+[flow](gcp_flow_hw4.py)  
+[deployment](make_deployment_hw4.py)
 
 
 ## Question 5. Email or Slack notifications
@@ -123,7 +124,7 @@ How many rows were processed by the script?
 - `125,268`
 - `377,922`
 - `728,390`
-- `514,392`
+-[x] `514,392`
 
 
 ## Question 6. Secrets
@@ -132,7 +133,7 @@ Prefect Secret blocks provide secure, encrypted storage in the database and obfu
 
 - 5
 - 6
-- 8
+- [x] 8
 - 10
 
 

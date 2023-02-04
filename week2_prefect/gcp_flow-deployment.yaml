@@ -1,21 +1,15 @@
 ###
-### A complete description of a Prefect Deployment for flow 'GCP flow'
+### A complete description of a Prefect Deployment for flow 'GCP flow: hw4'
 ###
-name: homework2-2
+name: GCP-to-BQ-flow2
 description: null
-version: 5635f37198337c8ef7226c57bff53617
+version: 6a902d40fd38c36563d83720ffd7753b
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: null
 tags: []
-parameters:
-  color: green
-  year: 2020
-  month: 1
-schedule:
-  cron: 0 5 1 * *
-  timezone: null
-  day_or: true
+parameters: {}
+schedule: null
 is_schedule_active: null
 infra_overrides: {}
 infrastructure:
@@ -32,11 +26,20 @@ infrastructure:
 ###
 ### DO NOT EDIT BELOW THIS LINE
 ###
-flow_name: GCP flow
+flow_name: 'GCP flow: hw4'
 manifest_path: null
-storage: null
-path: /home/roman/de_zoomcamp_2023/week2_prefect
-entrypoint: gcp_flow_hw1.py:gcp_flow
+storage:
+  repository: https://github.com/rzabolotin/de_zoomcamp_2023
+  reference: null
+  access_token: null
+  include_git_objects: true
+  _block_document_id: 1b4be838-ebf5-4be8-92da-eb8c359b6d31
+  _block_document_name: de-zoom-repo
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: week2_prefect
+entrypoint: gcp_flow_hw4.py:gcp_flow
 parameter_openapi_schema:
   title: Parameters
   type: object
@@ -58,4 +61,4 @@ parameter_openapi_schema:
   - year
   - month
   definitions: null
-timestamp: '2023-02-03T00:31:42.755816+00:00'
+timestamp: '2023-02-04T02:35:01.473624+00:00'
