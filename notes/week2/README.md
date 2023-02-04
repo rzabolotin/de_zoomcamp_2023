@@ -2,7 +2,7 @@
 
 ## 1.Task и Flow
 
-Prefect это оркестратор, аналог Airflow и даже основной разработчик Prefect был очень активным разработчиком Airflow ранее.  
+Prefect это оркестратор, аналог Airflow и даже основной разработчик Prefect был очень активным разработчиком Airflow ранее.   
 Чтобы сделать свой flow нужно написать скрипт python, и функции обернуть декораторами @flow, @task
 
 Пример flow:
@@ -10,7 +10,7 @@ Prefect это оркестратор, аналог Airflow и даже осно
 - Преобразуем типы df
 - Сохраняем в parquet
 
-```
+```python
 from pathlib import Path
 from prefect import flow, task
 from prefect.tasks import task_input_hash
