@@ -92,7 +92,7 @@ How many rows were processed by the script?
 
 - 88,019
 - 192,297
-- 88,605
+- [x] 88,605
 - 190,225
 
 
