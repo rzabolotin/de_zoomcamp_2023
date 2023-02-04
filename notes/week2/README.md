@@ -139,7 +139,7 @@ prefect orion start
 В UI можно смотреть историю запусков, запускать новые деплойменты, или менять расписание.  
 Можно настраивать уведомления по состоянию flow.
 
-[Как он выглядит](https://raw.githubusercontent.com/boisalai/de-zoomcamp-2023/main/dtc/w2s15.png)
+[!Как он выглядит](https://raw.githubusercontent.com/boisalai/de-zoomcamp-2023/main/dtc/w2s15.png)
 
 # 5. Блоки
 Блоки это такой удобный расширяемый механизм, который позволяет сохранять настройки какие-то в хранилище prefect.
