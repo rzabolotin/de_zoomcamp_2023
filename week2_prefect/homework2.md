@@ -124,7 +124,7 @@ How many rows were processed by the script?
 - `125,268`
 - `377,922`
 - `728,390`
--[x] `514,392`
+- [x] `514,392`
 
 
 ## Question 6. Secrets
