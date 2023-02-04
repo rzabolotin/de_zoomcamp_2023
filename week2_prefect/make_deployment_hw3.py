@@ -1,6 +1,6 @@
 from prefect.deployments import Deployment
 
-from bcg_to_bq_flow_hw3 import gather_flow
+from gcs_to_bq_flow_hw3 import gather_flow
 
 
 my_dep = Deployment.build_from_flow(

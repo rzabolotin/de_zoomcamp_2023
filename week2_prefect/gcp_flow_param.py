@@ -57,7 +57,7 @@ def gcp_flow(color: str, year: int, month: int) -> None:
     path = save_data_local(clean_data, "data/" + dataset_file)
     save_to_gcp(path)
 
-    #save_to_bq(clean_data, "zoom.taxiData")
+    save_to_bq(clean_data, "zoom.taxiData")
 
 
 @flow(name="Parent GCP flow")
