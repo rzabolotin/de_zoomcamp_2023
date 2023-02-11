@@ -75,8 +75,8 @@ WHERE
 ## Question 4:
 What is the best strategy to optimize the table if query always filter by pickup_datetime and order by affiliated_base_number?
 - Cluster on pickup_datetime Cluster on affiliated_base_number
-- Partition by pickup_datetime Cluster on affiliated_base_number
-- [x] Partition by pickup_datetime Partition by affiliated_base_number
+- [x] Partition by pickup_datetime Cluster on affiliated_base_number
+- Partition by pickup_datetime Partition by affiliated_base_number
 - Partition by affiliated_base_number Cluster on pickup_datetime
 
 > Partitioning is proper when we need to filter by column, so if we constantly filter by pickup_datetime it's helpful to make partitions by that column.
