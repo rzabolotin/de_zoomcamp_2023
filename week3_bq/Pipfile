@@ -7,6 +7,7 @@ name = "pypi"
 prefect = "*"
 prefect-gcp = {version = "==0.2.4", extras = ["cloud_storage"]}
 pyarrow = "*"
+pandas = "*"
 
 [dev-packages]
 
