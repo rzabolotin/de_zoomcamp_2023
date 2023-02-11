@@ -137,3 +137,9 @@ Note: Column types for all files used in an External Table must have the same da
 >
 > The same error comes when I try to query this column in the external table. 
 > So, the conclusion is that you need to match the data types in the parquet files within all files in the folder.
+> 
+> It can be done this way:
+```python
+df["PUlocationID"] = df["PUlocationID"].astype(float)
+df["DOlocationID"] = df["DOlocationID"].astype(float)
+```
