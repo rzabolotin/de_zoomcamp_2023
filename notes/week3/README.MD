@@ -166,17 +166,18 @@ ML.PREDICT(
 
 ```
 
+## Как подключиться к BigQuery
+- Использовать консольный клиент bq.
+- Использовать BiqQuery Web UI.
+- Использовать коннекторы из разных языков программирования.
+- Использовать Data Studio.
 
 
+## Ссылки
 
-
-
-
-
-
-https://github.com/ziritrion/dataeng-zoomcamp/blob/main/notes/3_data_warehouse.md
-https://docs.google.com/presentation/d/1a3ZoBAXFk8-EhUsd7rAZd-5p_HpltkzSeujjRGB2TAI/edit#slide=id.g10eebc44ce4_0_0
-https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_3_data_warehouse
+- https://github.com/ziritrion/dataeng-zoomcamp/blob/main/notes/3_data_warehouse.md
+- https://docs.google.com/presentation/d/1a3ZoBAXFk8-EhUsd7rAZd-5p_HpltkzSeujjRGB2TAI/edit#slide=id.g10eebc44ce4_0_0
+- https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_3_data_warehouse
 
 
 
