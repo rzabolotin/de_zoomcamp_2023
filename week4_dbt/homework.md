@@ -54,7 +54,7 @@ You should find the views and models for querying in your DWH.
 - 61666551
 - 41856543
 
-> Don't know correct answer my result is 61533641
+> My result is 61533641
 
 ```sql
 SELECT count(*) FROM `summer-flux-373415.result_hw4.fact_table`
