@@ -30,8 +30,6 @@ PARTITION BY DATE(tpep_pickup_datetime)
 AS SELECT * FROM `dataset_hw4.yellow_trips`
 ```
  
-  
-
 In this homework, we'll use the models developed during the week 4 videos and enhance the already presented dbt project using the already loaded Taxi data for fhv vehicles for year 2019 in our DWH.
 
 We will use the data loaded for:
@@ -56,6 +54,13 @@ You should find the views and models for querying in your DWH.
 - 61666551
 - 41856543
 
+> Don't know correct answer my result is 61533641
+
+```sql
+SELECT count(*) FROM `summer-flux-373415.result_hw4.fact_table`
+WHERE EXTRACT(YEAR from pickup_datetime) IN (2019, 2020)
+```
+
 
 ### Question 2: 
 
@@ -63,10 +68,15 @@ You should find the views and models for querying in your DWH.
 
 You will need to complete "Visualising the data" videos, either using data studio or metabase. 
 
-- 89.9/10.1
+- [x] 89.9/10.1
 - 94/6
 - 76.3/23.7
 - 99.1/0.9
+
+
+> My result is 10.5/89.5, chosed the closest answer
+
+![img.png](images/img.png)
 
 
 
@@ -82,6 +92,12 @@ Filter records with pickup time in year 2019.
 - 57084899
 - 42084899
 
+> My result is 43244696
+
+```sql
+SELECT count(*) FROM `result_hw4.stg_fhv_tripdata`
+WHERE EXTRACT(YEAR from pickup_datetime) = 2019
+```
 
 ### Question 4: 
 
@@ -96,6 +112,14 @@ Run it via the CLI without limits (is_test_run: false) and filter records with p
 - 22676253
 - 29565253
 
+> My result is 22998722 
+
+```sql
+SELECT count(*) FROM `summer-flux-373415.result_hw4.fact_table_fhv`
+WHERE EXTRACT(YEAR from pickup_datetime) IN (2019)
+```
+
+
 ### Question 5: 
 
 **What is the month with the biggest amount of rides after building a tile for the fact_fhv_trips table**
@@ -103,5 +127,11 @@ Create a dashboard with some tiles that you find interesting to explore the data
 
 - March
 - April
-- January
+- [x] January
 - December
+
+> My result is January
+
+![img.png](images/img2.png)
+
+
