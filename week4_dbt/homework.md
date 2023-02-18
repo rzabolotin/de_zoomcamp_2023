@@ -23,12 +23,13 @@ By this stage of the course you should have already:
 > Created tables in BiqQuery, using files from GCS bucket.
 > 
 > Also, created partitioned version of tables using script:
-> ```sql
+
+```sql
 CREATE TABLE dataset_hw4.yellow_trips_part
 PARTITION BY DATE(tpep_pickup_datetime)
 AS SELECT * FROM `dataset_hw4.yellow_trips`
 ```
-  
+ 
   
 
 In this homework, we'll use the models developed during the week 4 videos and enhance the already presented dbt project using the already loaded Taxi data for fhv vehicles for year 2019 in our DWH.
