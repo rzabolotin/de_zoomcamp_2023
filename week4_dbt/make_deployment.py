@@ -1,5 +1,5 @@
 from prefect.deployments import Deployment
-from load_to_bg import gather_flow
+from load_to_gcp import gather_flow
 
 my_dep = Deployment.build_from_flow(
     flow=gather_flow,

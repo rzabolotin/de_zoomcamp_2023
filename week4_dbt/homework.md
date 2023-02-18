@@ -14,7 +14,21 @@ By this stage of the course you should have already:
     * fhv data - Year 2019. 
 
 
-
+> Created prefect deployment to load all the data into gcs bucket
+> - [load_to_gcp.py](load_to_gcp.py)
+> - [make_deployment](make_deployment.py)
+>
+> Run deployment to load colors ["yellow", "green", "fhv"] for required years
+> 
+> Created tables in BiqQuery, using files from GCS bucket.
+> 
+> Also, created partitioned version of tables using script:
+> ```sql
+CREATE TABLE dataset_hw4.yellow_trips_part
+PARTITION BY DATE(tpep_pickup_datetime)
+AS SELECT * FROM `dataset_hw4.yellow_trips`
+```
+  
   
 
 In this homework, we'll use the models developed during the week 4 videos and enhance the already presented dbt project using the already loaded Taxi data for fhv vehicles for year 2019 in our DWH.
