@@ -12,7 +12,7 @@
 ETL - Extract, Transform, Load.  
 ELT - Extract, Load, Transform.  
 
-![img.png](img/img.png)
+![img.png](img/img.png) ![img.png](img11/img.png)
 
 С развитием Big Data и Data Warehouse, ETL стало менее эффективным. Процесс обработки данных стал дорогим, и часто необходимо обрабатывать большие объемы данных.  
 Между тем стоимость хранения данных стала снижаться и стало возможным все чаще переходить на другую модель - ELT.  
