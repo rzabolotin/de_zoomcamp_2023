@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim-zones
+    columns:
+     - name: locationid
+       tests:
+        - not_null
+        - unique
+
+  - name: fact_table
+    columns:
+     - name: tripid
+       tests:
+        - unique
+        - not_null
+     - name: service_type
+       tests:
+        - accepted_values:
+            values: 
+             - "Green"
+             - "Yellow"
+
+  - name: fact_table_fhv
+    columns:
+     - name: tripid
+       tests:
+        - unique
+        - not_null
+        
+        
+     
+        
+        

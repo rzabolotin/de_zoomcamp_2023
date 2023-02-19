@@ -3,7 +3,6 @@ version: 2
 sources:
   - name: dataset_hw4
     database: summer-flux-373415
-    schema: dataset_hw4
 
     tables:
       - name: green_trips_part
