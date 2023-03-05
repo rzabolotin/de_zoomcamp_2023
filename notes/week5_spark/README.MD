@@ -392,7 +392,10 @@ gcloud dataproc jobs submit pyspark \
 В результате скрипт запустится на кластере Dataproc, и результаты работы скрипта будут сохранены в Google Cloud Storage. Работа будет происходить на созданных виртуальных машинах, указанных при создании кластера.  
 
 
-
+### Ссылки
+- https://sparkbyexamples.com/pyspark/
+- https://spark.apache.org/docs/latest/api/python/index.html
+- 
 
 
 
