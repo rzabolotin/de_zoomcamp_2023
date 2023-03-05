@@ -3,9 +3,9 @@
 
 ### Для чего нужен Spark
 Spark это технология, которая позволяет обрабатывать очень большие объемы данных.  
-Осуществляется это за счет разбиения больших задач на маленькие, которые могут быть выполнены параллельно, и потом агрегирования результатов.  
+Осуществляется это за счет разбиения больших задач на маленькие, которые могут быть выполнены параллельно, и потом агрегированы.  
 
-Чем-то пооже на то, как устроен внутри BigQuery, но в отличие от BigQuery, Spark позволяет работать с данными, которые не хранятся в BigQuery.  
+Чем-то похоже на то, как устроен внутри BigQuery, но в отличие от BigQuery, Spark позволяет работать с данными, которые не хранятся в BigQuery, с любыми данными, на вашем железе.
 
 ### Что такое Spark
 Spark это программа, написанная на языке Scala, но есть API на Java, Python, R.  
@@ -22,7 +22,7 @@ export PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"
 export PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9-src.zip:$PYTHONPATH"
 ```
 
-Можно возспользоваться пакетом findspark, который упрощает эту задачу.  
+Можно воспользоваться пакетом findspark, который упрощает эту задачу.  
 ```python
 import findspark
 findspark.init()
@@ -32,6 +32,7 @@ findspark.init()
 
 Для работы с Spark в Python, нужно создать SparkSession.  
 В параметре master указывается адрес кластера, если он есть, или local[*], если нужно запустить локально.
+Вся работа происходит через этот объект.
 
 ```python
 from pyspark.sql import SparkSession
@@ -99,7 +100,7 @@ df = spark.read \
 ### Как работать с данными в Spark
 Существует несколько способов работы с данными в Spark.  
 
-#### Использование объектов DataFrame. 
+#### 1. Использование объектов DataFrame. 
 После загрузки данных мы имеем объект DataFrame, который представляет собой таблицу, в которой есть колонки и строки. Очень похоже на pandas DataFrame.
 К нему можно применять различные трансформации и потом получить результат.  
 Можно показать в косоли (метод show), или сохранить в новое место (метод write).  
@@ -111,24 +112,22 @@ df.show(5)
 df.write.csv('data/yellow_tripdata_2019-01.csv', header=True)
 ```
 
-#### Возможные трансформации
-
-##### Выбор колонок
+#### Выбор колонок
 ```python
 df.select('VendorID', 'tpep_pickup_datetime').show(5)
 ```
 
-##### Фильтрация
+#### Фильтрация
 ```python
 df.filter(df['VendorID'] == 1).show(5)
 ```
 
-##### Группировка
+#### Группировка
 ```python
 df.groupBy('VendorID').count().show()
 ```
 
-##### Пример сложной трансформации
+#### Пример сложной трансформации
 ```python
 df.select(
     df['VendorID'],
@@ -144,7 +143,7 @@ df.select(
 
 ```
 
-##### Объединения
+#### Объединения
 ```python
 df1 = spark.read.csv('data/yellow_tripdata_2019-01.csv', header=True)
 df2 = spark.read.csv('data/yellow_tripdata_2019-02.csv', header=True)
@@ -152,7 +151,7 @@ df3 = spark.read.csv('data/yellow_tripdata_2019-03.csv', header=True)
 df1.union(df2).union(df3).show(5)
 ```
 
-##### Соединения
+#### Соединения
 ```python
 df1 = spark.read.csv('data/yellow_tripdata_2019-01.csv', header=True)
 df2 = spark.read.csv('data/yellow_tripdata_2019-02.csv', header=True)
